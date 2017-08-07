@@ -6,7 +6,11 @@
 ## Welcome
 ```
 docker pull samurais/blade:latest
-docker run -it -v `pwd`:/workspace --name blade samurais/blade:latest zsh
+git clone https://github.com/Samurais/blade-docker.git
+cd blade-docker/example
+docker run -it --rm -v /Users/hain/git/blade-docker/example:/workarea/example --name blade samurais/blade:latest zsh
+cd /workarea/example/lcs
+./build.sh
 ```
 
 Then, use ```blade``` to build, test src.
